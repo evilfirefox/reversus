@@ -2,18 +2,25 @@
 
 namespace Tests\Reversus\Mocks;
 
-interface I
+abstract class ClassA
 {
-    public function method();
-}
+    protected $protected;
 
-abstract class A implements I
-{
-}
+    private $private;
 
-class B extends A
-{
-    public function method()
+    public $public;
+
+    private function privateMethod()
     {
     }
+
+    protected function protectedMethod()
+    {
+    }
+
+    public function publicMethod()
+    {
+    }
+
+    abstract public function abstractMethod();
 }
